@@ -1,13 +1,8 @@
-    try {
-        if (typeof emailjs === 'undefined') throw new Error('EmailJS not loaded');
-        if (!EMAILJS_SERVICE_ID || EMAILJS_SERVICE_ID === 'YOUR_EMAILJS_SERVICE_ID') {
-            throw new Error('EmailJS service ID is not configured. Copy config.js.example to config.js and set your service ID.');
-        }
-        emailjs.init(EJS.key);
-        await emailjs.sendForm(EJS.svc, EJS.tpl, f);
-        t.className = 'toast ok'; t.textContent = '> Request transmitted successfully.'; f.reset();
-    } catch (err) {
-        console.error(err);
-        t.className = 'toast err'; t.textContent = '> Failed. Email me directly at dhanushkumarr1508@gmail.com';
-    } finally { btn.disabled = false; btn.textContent = '[ Send request ]'; }
-});
+'use strict';
+
+const EJS = { key: '-cawejxZaLoIR7jlN', svc: 'service_sryb28h', tpl: 'template_6tyy85g' };
+const RESUME_ID = '1SkevAZHQVY3qSAm_mgKP1nYRug_Rf0wd';
+const RESUME = `https://drive.google.com/file/d/${RESUME_ID}/view?usp=sharing`;
+const RESUME_DL = `https://drive.google.com/uc?export=download&id=${RESUME_ID}`;
+const GITHUB_URL = '';
+
